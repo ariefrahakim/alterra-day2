@@ -6,7 +6,6 @@ Feature: Login to Saucedemo.com
     When user input valid username
     And user input valid password
     And user click login button
-    Then the system show products pages
 
   @FailedLogin1
   Scenario: Failed Login With invalid password

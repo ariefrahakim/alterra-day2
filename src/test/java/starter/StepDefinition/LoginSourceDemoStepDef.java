@@ -6,14 +6,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.annotations.Steps;
-import starter.Pages.ProductPage;
-import starter.Step.LoginStep;
+import starter.Step.LoginSourceDemoStep;
 
 @DefaultUrl("https://www.saucedemo.com/")
-public class LoginStepdefs {
+public class LoginSourceDemoStepDef {
 
     @Steps
-    LoginStep loginStep;
+    LoginSourceDemoStep loginStep;
 
     @Given("user already on login page")
     public void iAlreadyOnLoginPage() {
@@ -33,11 +32,6 @@ public class LoginStepdefs {
     @And("user click login button")
     public void iClickLoginButton() {
         loginStep.clickLoginButton();
-    }
-
-    @Then("the system show products pages")
-    public void theSystemShowProductsPages() {
-        loginStep.verifyProductPage();
     }
 
     @When("user input invalid username")
@@ -61,11 +55,11 @@ public class LoginStepdefs {
 
     }
 
-    @Given("User already login")
-    public void userAlreadyLogin() {
-        loginStep.openLoginPage();
-        loginStep.InputUsername();
-        loginStep.InputPassword();
-        loginStep.clickLoginButton();
-    }
+//    @Given("User already login")
+//    public void userAlreadyLogin() {
+//        loginStep.openLoginPage();
+//        loginStep.InputUsername();
+//        loginStep.InputPassword();
+//        loginStep.clickLoginButton();
+//    }
 }

@@ -1,13 +1,13 @@
 //package starter.Step;
 //
 //import net.thucydides.core.annotations.Step;
-//import starter.Pages.Login;
+//import starter.Pages.LoginFeature;
 //
 //import static org.junit.Assert.assertTrue;
 //
-//public class LoginStep {
+//public class LoginFeatureStep {
 //
-//    Login login;
+//    LoginFeature login;
 //
 //    @Step
 //    public void openLoginPage(){
@@ -17,12 +17,15 @@
 //
 //    @Step
 //    public void InputUsername(){
-//        login.InputUsername();
+//        String username = new String();
+//        login.InputUsername(username);
 //    }
 //
 //    @Step
-//    public void InputPassword(){
-//        login.InputPassword();
+//    public void InputPassword()
+//    {
+//        String password = new String();
+//        login.InputPassword(password);
 //    }
 //
 //    @Step

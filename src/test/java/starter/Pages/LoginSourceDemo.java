@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 @DefaultUrl("https://www.saucedemo.com/")
-public class LoginPage extends PageObject {
+public class LoginSourceDemo extends PageObject {
 
     @FindBy(xpath = "//*[@id=\"user-name\"]")
     WebElement fieldUsername;
@@ -17,6 +17,11 @@ public class LoginPage extends PageObject {
 
     @FindBy(xpath = "//*[@id=\"login-button\"]")
     WebElement ButtonLogin;
+
+
+//    @FindBy(xpath = "//*[@id=\"shopping_cart_container\"]/a")
+//    WebElement SuccessLogin;
+
 
     @FindBy(xpath = "//*[@id=\"user-name\"]")
     WebElement InvalidUsername;
@@ -41,6 +46,10 @@ public class LoginPage extends PageObject {
     public void clickLoginButton(){
         ButtonLogin.click();
     }
+
+//    public Boolean successLogin(){
+//        return SuccessLogin.isDisplayed();
+//    }
 
     public void inputInvalidUsername(){
         InvalidUsername.sendKeys("nshmahira");
